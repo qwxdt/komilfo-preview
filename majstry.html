@@ -31,7 +31,8 @@ section{padding-top:72px}
 .head{display:flex;align-items:flex-end;justify-content:space-between;padding:0 var(--pad);margin-bottom:22px;gap:16px}
 
 /* header: burger left · logo center · phone right */
-.hdr{position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:48px 1fr 48px;align-items:center;padding:8px calc(var(--pad) - 12px);padding-top:calc(8px + env(safe-area-inset-top));color:var(--fg);transition:background .35s,color .35s,box-shadow .35s}
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:48px 1fr 48px;align-items:center;padding:8px calc(var(--pad) - 12px);padding-top:calc(8px + env(safe-area-inset-top));color:var(--fg);transition:background .35s,color .35s,box-shadow .35s,transform .45s var(--ease)}
+.hdr.hide{transform:translateY(-100%)}
 .logo{font-family:FixelD,Fixel,sans-serif;font-size:24px;font-weight:600;letter-spacing:.01em;justify-self:center;transition:transform .5s var(--ease)}
 .burger,.hcall{position:relative;width:48px;height:48px;display:grid;place-items:center;background:none;border:0;padding:0;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .burger span{position:absolute;left:12px;height:2px;border-radius:2px;background:currentColor;transition:transform .5s var(--ease),width .5s var(--ease),top .5s var(--ease)}
@@ -399,9 +400,9 @@ body.p-solid main{padding-top:64px}
 <script>
 (()=>{const d=document,b=d.body,h=d.querySelector('.hdr');
 const hero=d.querySelector('[data-hero]');
-const f=()=>{const y=scrollY,th=hero?hero.offsetHeight-80:10;
- h.classList.toggle('solid',y>th);
-};
+let ly=0;const f=()=>{const y=scrollY;
+ h.classList.toggle('solid',y>40);
+ h.classList.toggle('hide',y>ly&&y>240&&!b.classList.contains('menu-open'));ly=y;};
 addEventListener('scroll',f,{passive:true});f();
 const bt=d.querySelector('.burger'),mn=d.getElementById('menu');
 const pg=(location.pathname.split('/').pop()||'index.html').replace('.html','');
