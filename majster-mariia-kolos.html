@@ -195,11 +195,15 @@ body.p-solid main{padding-top:64px}
 .score span{display:block;font-size:14px;color:var(--mute);margin-top:4px}
 .stars{display:inline-flex;gap:2px;color:var(--gold)}
 .stars svg{width:16px;height:16px}.stars svg.off{color:#E4DCCE}
-.qs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:22px var(--pad) 0;scrollbar-width:none}
+.qs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:22px var(--pad) 0;scroll-padding:0 var(--pad);scrollbar-width:none}
+.qs:after{content:'';flex:0 0 1px}
 .qs::-webkit-scrollbar{display:none}
 .q{flex:0 0 min(300px,80vw);scroll-snap-align:start;background:var(--soft);border-radius:var(--r);padding:22px 20px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
 .q blockquote{font-size:16px;line-height:1.5}
 .q figcaption{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--mute)}
+.q .qn{color:var(--ink);font-weight:500;font-size:15px}
+.q .qd{display:flex;align-items:center;gap:6px;font-size:13px}
+.q .gg{width:14px;height:14px;flex:none}
 .revs .wrap+.wrap{margin-top:20px}
 .revs>.wrap:last-child{margin-top:20px}
 
