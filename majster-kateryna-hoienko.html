@@ -63,14 +63,14 @@ body.p-solid main{padding-top:64px}
 .mbg:after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(31,25,19,.93),rgba(31,25,19,.86) 50%,rgba(31,25,19,.97))}
 .menu-open .mbg{opacity:1}.menu-open .mbg img{transform:scale(1)}
 .min{position:relative;height:100%;display:flex;flex-direction:column;padding:calc(84px + env(safe-area-inset-top)) var(--pad) calc(22px + env(safe-area-inset-bottom));overflow-y:auto}
-.menu ol{flex:1}
+.menu ol{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8px 0 24px}
 .menu li{overflow:hidden}
-.menu li a{display:flex;align-items:baseline;gap:14px;padding:7px 0;font-family:FixelD,Fixel,sans-serif;font-size:clamp(30px,9.4vw,40px);font-weight:500;letter-spacing:-.035em;line-height:1.12;transform:translateY(105%);transition:transform .5s var(--ease),color .3s}
+.menu li a{display:flex;justify-content:center;padding:6px 0;font-family:FixelD,Fixel,sans-serif;font-size:clamp(38px,12.4vw,54px);font-weight:500;letter-spacing:-.035em;line-height:1.12;transform:translateY(105%);transition:transform .5s var(--ease),color .3s}
 .menu li small{font:600 11px Fixel,sans-serif;color:var(--gold);letter-spacing:.1em;width:18px;flex:none;transform:translateY(-.9em)}
-.menu li a span{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;transition:background-size .5s var(--ease)}
+.menu li a span{background:linear-gradient(currentColor,currentColor) 50% 100%/0 2px no-repeat;transition:background-size .5s var(--ease)}
 .menu li a.cur{color:#E9D9B8}
-.menu li a.cur span{background-size:100% 1.5px}
-.menu li a:active span{background-size:100% 1.5px}
+.menu li a.cur span{background-size:100% 2px}
+.menu li a:active span{background-size:100% 2px}
 .menu-open .menu li a{transform:none;transition:transform .9s var(--ease)}
 .menu-open .menu li:nth-child(1) a{transition-delay:.22s}.menu-open .menu li:nth-child(2) a{transition-delay:.27s}.menu-open .menu li:nth-child(3) a{transition-delay:.32s}.menu-open .menu li:nth-child(4) a{transition-delay:.37s}.menu-open .menu li:nth-child(5) a{transition-delay:.42s}.menu-open .menu li:nth-child(6) a{transition-delay:.47s}
 .mchips,.mbot{opacity:0;transform:translateY(16px);transition:opacity .3s,transform .3s}
@@ -81,9 +81,9 @@ body.p-solid main{padding-top:64px}
 .mcta{width:100%;background:var(--ivory);color:var(--fg);justify-content:space-between;padding:0 8px 0 24px;height:58px}
 .mcta svg{width:42px;height:42px;padding:12px;border-radius:50%;background:var(--fg);color:var(--ivory);transition:transform .4s var(--ease)}
 .mcta:active svg{transform:translateX(4px)}
-.mrow{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:22px}
+.mrow{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding-top:22px;border-top:1px solid rgba(244,238,228,.12)}
 .mtel{display:block;font-family:FixelD,Fixel,sans-serif;font-size:26px;font-weight:500;letter-spacing:-.03em;line-height:1.1}
-.mopen{display:flex;align-items:center;gap:7px;margin-top:6px;font-size:13px;color:rgba(244,238,228,.6)}
+.mopen{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:6px;font-size:13px;color:rgba(244,238,228,.6)}
 .mopen i{width:7px;height:7px;border-radius:50%;background:#B9A88E;flex:none}
 .mopen.on i{background:#7FD49A;box-shadow:0 0 0 0 rgba(127,212,154,.6);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 7px rgba(127,212,154,0)}100%{box-shadow:0 0 0 0 rgba(127,212,154,0)}}
@@ -91,7 +91,7 @@ body.p-solid main{padding-top:64px}
 .msoc a{width:44px;height:44px;display:grid;place-items:center;color:var(--ivory);transition:transform .3s var(--ease)}
 .msoc a:active{transform:scale(.86)}
 .msoc svg{width:24px;height:24px}
-.maddr{font-size:13px;color:rgba(244,238,228,.45);margin-top:14px}
+.maddr{font-size:13px;color:rgba(244,238,228,.45);margin-top:10px;text-align:center}
 
 /* buttons */
 .btns{display:flex;gap:10px;margin-top:24px}
@@ -360,16 +360,14 @@ body.p-solid main{padding-top:64px}
   <div class="mbg"><img src="a/about/salon.webp" alt="" loading="lazy"></div>
   <div class="min">
     <ol>
-      <li><a href="index.html" data-p="index"><small>01</small><span>Головна</span></a></li>
-      <li><a href="poslugy.html" data-p="poslugy"><small>02</small><span>Послуги і ціни</span></a></li>
-      <li><a href="majstry.html" data-p="majstry"><small>03</small><span>Майстри</span></a></li>
-      <li><a href="index.html#works"><small>04</small><span>Наші роботи</span></a></li>
-      <li><a href="index.html#reviews"><small>05</small><span>Відгуки</span></a></li>
-      <li><a href="index.html#contacts"><small>06</small><span>Контакти</span></a></li>
+      <li><a href="index.html" data-p="index"><span>Головна</span></a></li>
+      <li><a href="poslugy.html" data-p="poslugy"><span>Послуги і ціни</span></a></li>
+      <li><a href="majstry.html" data-p="majstry"><span>Майстри</span></a></li>
+      <li><a href="index.html#works"><span>Наші роботи</span></a></li>
+      <li><a href="index.html#reviews"><span>Відгуки</span></a></li>
+      <li><a href="index.html#contacts"><span>Контакти</span></a></li>
     </ol>
-    <div class="mchips"><a href="poslugy.html#nihti">Нігті</a><a href="poslugy.html#volossia">Волосся</a><a href="poslugy.html#brovy">Брови та вії</a><a href="poslugy.html#depiliatsiia">Депіляція</a><a href="poslugy.html#kosmetolohiia">Косметологія</a><a href="poslugy.html#masazh">Масаж</a></div>
     <div class="mbot">
-      <a class="btn mcta" href="zapis.html"><span>Записатися онлайн</span><svg><use href="#arr"/></svg></a>
       <div class="mrow">
         <div><a class="mtel" href="tel:+380686883636">068 688 36 36</a><p class="mopen"><i></i><span>Пн–Сб 9–20, Нд 10–18</span></p></div>
         <div class="msoc"><a href="https://www.instagram.com/umankomilfosalon" aria-label="Instagram"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17 5.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM12 3.6c2.7 0 3 0 4.1.1 2.8.1 4.1 1.5 4.2 4.2.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c-.1 2.7-1.4 4.1-4.2 4.2-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-2.8-.1-4.1-1.5-4.2-4.2C3.6 15 3.6 14.7 3.6 12s0-3 .1-4.1C3.8 5.2 5.1 3.8 7.9 3.7 9 3.6 9.3 3.6 12 3.6z"/></svg></a><a href="https://www.facebook.com/p/%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD-%D0%9A%D0%BE%D0%BC%D0%B8%D0%BB%D1%8C%D1%84%D0%BE-%D0%A3%D0%BC%D0%B0%D0%BD%D1%8C-100063965496667/" aria-label="Facebook"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.4H16l.4-2.9h-2.9V8.9c0-.8.2-1.4 1.4-1.4h1.6V4.9c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.1H8v2.9h2.4V21z"/></svg></a></div>
