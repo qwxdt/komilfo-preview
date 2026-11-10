@@ -216,7 +216,8 @@ body.p-solid main{padding-top:64px}
 .card .lsub{display:block;margin-top:8px;font:600 10px Fixel,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:rgba(244,238,228,.45)}
 @keyframes shine{0%,60%{background-position:100% 0}100%{background-position:-50% 0}}
 .card .row{display:flex;justify-content:space-between;align-items:flex-end;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,238,228,.6)}
-.card .row b{font-family:FixelD,Fixel,sans-serif;font-size:34px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--ivory)}
+.card .row{gap:10px}
+.card .row b{white-space:nowrap;font-family:FixelD,Fixel,sans-serif;font-size:clamp(26px,8.6vw,34px);font-weight:500;letter-spacing:0;text-transform:none;color:var(--ivory)}
 
 /* contacts */
 .map{display:block;margin:0 var(--pad);border-radius:var(--r);overflow:hidden;aspect-ratio:4/3.4;position:relative;background:var(--soft)}
@@ -339,6 +340,8 @@ body.p-solid main{padding-top:64px}
 .menu-open .hbook{background:var(--ivory)!important;color:var(--fg)!important}
 @media (max-width:340px){.hbook{padding:0 12px;font-size:13px;height:36px}.logo{font-size:21px}}
 @media (prefers-reduced-motion:reduce){.hbook:after{animation:none}}
+
+@media (max-width:340px){.card .row span{font-size:10px}.cert .btn{font-size:14px;padding:0 16px}}
 </style>
 </head>
 <body class="p-over">
@@ -397,15 +400,13 @@ body.p-solid main{padding-top:64px}
   <div class="rail"><a class="svc" href="zapis.html"><div class="ph"><img src="a/services/manikyur-pedykyur-4-ruky.webp" alt="" loading="lazy"></div><h3>Манікюр + педикюр у&nbsp;4&nbsp;руки</h3><div class="p">1 300–1 500 ₴ · 1 год 30 хв</div></a><a class="svc" href="zapis.html"><div class="ph"><img src="a/services/manikiur-pokryttia.webp" alt="" loading="lazy"></div><h3>Манікюр з покриттям</h3><div class="p">від 550 ₴</div></a><a class="svc" href="zapis.html"><div class="ph"><img src="a/services/farbuvannia-koreniv.webp" alt="" loading="lazy"></div><h3>Фарбування коренів «тон в тон»</h3><div class="p">1 100–1 500 ₴</div></a><a class="svc" href="zapis.html"><div class="ph"><img src="a/services/korektsiia-briv.webp" alt="" loading="lazy"></div><h3>Корекція і фарбування брів</h3><div class="p">500 ₴</div></a><a class="svc" href="zapis.html"><div class="ph"><img src="a/services/masazh-spyny.webp" alt="" loading="lazy"></div><h3>Масаж спини</h3><div class="p">500 ₴ · 40 хв</div></a></div>
 </section>
 
-<section id="levels" class="lvls">
-  <div class="lbox rv"><input type="radio" name="hl" id="hl-0" class="lvi lv0"><input type="radio" name="hl" id="hl-1" class="lvi lv1" checked><input type="radio" name="hl" id="hl-2" class="lvi lv2">
-    <p class="over">Манікюр і педикюр</p>
-    <h2>Одна послуга —<br>три рівні майстрині</h2>
-    <p class="sub">Оберіть рівень — і побачите ціну та імена.</p>
-    <div class="seg n3"><label for="hl-0">Майстер</label><label for="hl-1">Старший</label><label for="hl-2">Топ</label><i></i></div>
-    <p class="who t t0">Катя, Інна, Марія</p><p class="who t t1">Віка, Віка</p><p class="who t t2">Дарія, Катя</p>
-    <ul class="pl"><li><span class="n">Манікюр + покриття</span><b class="pr"><span class="t t0">550 ₴</span><span class="t t1">600 ₴</span><span class="t t2">650 ₴</span></b></li><li><span class="n">Манікюр без покриття</span><b class="pr"><span class="t t0">400 ₴</span><span class="t t1">450 ₴</span><span class="t t2">500 ₴</span></b></li><li><span class="n">Японський манікюр</span><b class="pr"><span class="t t0">450 ₴</span><span class="t t1">500 ₴</span><span class="t t2">550 ₴</span></b></li><li><span class="n">Педикюр + покриття</span><b class="pr"><span class="t t0">650 ₴</span><span class="t t1">700 ₴</span><span class="t t2">750 ₴</span></b></li></ul>
-    <a class="btn d" href="poslugy.html#nihti">Повний прайс на нігті <svg><use href="#arr"/></svg></a>
+<section id="cert">
+  <div class="cert rv">
+    <p class="over">Подарунок</p>
+    <h2>Сертифікат на будь-яку суму</h2>
+    <p class="sub">Діє на всі послуги салону 6 місяців. Отримувачка сама обере, що їй до душі.</p>
+    <div class="card"><div class="l"><i>Komilfo</i><span class="lsub">beauty salon</span></div><div class="row"><span>Подарунковий<br>сертифікат</span><b>1 000 ₴</b></div></div>
+    <a class="btn d" href="tel:+380686883636">Замовити в адміністратора</a>
   </div>
 </section>
 
@@ -422,7 +423,7 @@ body.p-solid main{padding-top:64px}
 </section>
 
 <section id="team">
-  <div class="head rv"><div><h2>Майстри</h2><p class="sub">Запис напряму до своєї майстрині</p></div><a class="link" href="majstry.html">Усі 11 <svg><use href="#arr"/></svg></a></div>
+  <div class="head rv"><h2>Майстри</h2><a class="link" href="majstry.html">Усі 11 <svg><use href="#arr"/></svg></a></div>
   <div class="rail"><a class="mst" href="majster-nataliia-ishchenko.html"><div class="ph"><img src="a/masters/nataliia-ishchenko.webp" alt="Наталія Іщенко" style="object-position:45.1% 50%" loading="lazy"></div><h3>Наталія Іщенко</h3><div class="r">Перукар-колорист, власниця</div></a><a class="mst" href="majster-dariia-martyniuk.html"><div class="ph"><img src="a/masters/dariia-martyniuk.webp" alt="Дарія Мартинюк" style="object-position:56.6% 50%" loading="lazy"></div><h3>Дарія Мартинюк</h3><div class="r">Топ · манікюр, педикюр</div></a><a class="mst" href="majster-olia-pichkur.html"><div class="ph"><img src="a/masters/olia-pichkur.webp" alt="Оля Пічкур" style="object-position:51.4% 50%" loading="lazy"></div><h3>Оля Пічкур</h3><div class="r">Перукар-колорист</div></a><a class="mst" href="majster-kateryna-kosteniuk.html"><div class="ph"><img src="a/masters/kateryna-kosteniuk.webp" alt="Катерина Костенюк" style="object-position:50.3% 50%" loading="lazy"></div><h3>Катя Костенюк</h3><div class="r">Топ · манікюр, педикюр</div></a><a class="mst" href="majster-nataliia-borshchyna.html"><div class="ph"><img src="a/masters/nataliia-borshchyna.webp" alt="Наталія Борщина" style="object-position:64.5% 50%" loading="lazy"></div><h3>Наталія Борщина</h3><div class="r">Бровіст</div></a><a class="mst" href="majster-viktoriia-babenko.html"><div class="ph"><img src="a/masters/viktoriia-babenko.webp" alt="Вікторія Бабенко" style="object-position:39.5% 50%" loading="lazy"></div><h3>Віка Бабенко</h3><div class="r">Старший · манікюр, педикюр</div></a><a class="mst" href="majster-liubov-petrivna.html"><div class="ph"><img src="a/masters/liubov-petrivna.webp" alt="Любов Петрівна" style="object-position:60% 50%" loading="lazy"></div><h3>Любов Петрівна</h3><div class="r">Майстер масажу</div></a><a class="mst" href="majster-viktoriia-sviatenko.html"><div class="ph"><img src="a/masters/viktoriia-sviatenko.webp" alt="Вікторія Святенко" style="object-position:42.5% 50%" loading="lazy"></div><h3>Віка Святенко</h3><div class="r">Старший · манікюр, педикюр</div></a></div>
 </section>
 
@@ -444,17 +445,6 @@ body.p-solid main{padding-top:64px}
     <div><b>5000+</b><small>клієнтів</small></div>
   </div>
 </section>
-
-<section id="cert">
-  <div class="cert rv">
-    <p class="over">Подарунок</p>
-    <h2>Сертифікат на будь-яку суму</h2>
-    <p class="sub">Діє на всі послуги салону 6 місяців. Отримувачка сама обере, що їй до душі.</p>
-    <div class="card"><div class="l"><i>Komilfo</i><span class="lsub">beauty salon</span></div><div class="row"><span>Подарунковий<br>сертифікат</span><b>1 000 ₴</b></div></div>
-    <a class="btn d" href="tel:+380686883636">Замовити в адміністратора</a>
-  </div>
-</section>
-
 <section id="contacts">
   <div class="head rv"><h2>Як нас знайти</h2></div>
   <a class="map rv" href="https://share.google/15hPFAmErESLFGNox"><img src="a/map.webp" alt="Карта: вул. Велика Фонтанна, 19/40" loading="lazy"><span class="dot"></span><span class="pin">Komilfo</span><span class="osm">© OpenStreetMap</span></a>

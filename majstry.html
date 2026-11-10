@@ -216,7 +216,8 @@ body.p-solid main{padding-top:64px}
 .card .lsub{display:block;margin-top:8px;font:600 10px Fixel,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:rgba(244,238,228,.45)}
 @keyframes shine{0%,60%{background-position:100% 0}100%{background-position:-50% 0}}
 .card .row{display:flex;justify-content:space-between;align-items:flex-end;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,238,228,.6)}
-.card .row b{font-family:FixelD,Fixel,sans-serif;font-size:34px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--ivory)}
+.card .row{gap:10px}
+.card .row b{white-space:nowrap;font-family:FixelD,Fixel,sans-serif;font-size:clamp(26px,8.6vw,34px);font-weight:500;letter-spacing:0;text-transform:none;color:var(--ivory)}
 
 /* contacts */
 .map{display:block;margin:0 var(--pad);border-radius:var(--r);overflow:hidden;aspect-ratio:4/3.4;position:relative;background:var(--soft)}
@@ -339,6 +340,8 @@ body.p-solid main{padding-top:64px}
 .menu-open .hbook{background:var(--ivory)!important;color:var(--fg)!important}
 @media (max-width:340px){.hbook{padding:0 12px;font-size:13px;height:36px}.logo{font-size:21px}}
 @media (prefers-reduced-motion:reduce){.hbook:after{animation:none}}
+
+@media (max-width:340px){.card .row span{font-size:10px}.cert .btn{font-size:14px;padding:0 16px}}
 </style>
 </head>
 <body class="p-solid">
