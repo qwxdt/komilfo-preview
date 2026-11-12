@@ -541,7 +541,7 @@ function render(){
     <div class="ticket"><div class="tt">${img(pair[0])}<div><div class="big">Пн, 5 жовтня, 14:00</div><span>${pair.map(k=>M[k].n).join(', ')}</span></div></div>
     ${sel.map(k=>`<div class="r"><span>${S[k].sh||S[k].n}</span><b>${M[who[k]].s}</b></div>`).join('')}
     <div class="r"><span>Разом</span><b>${money(sum())}</b></div><div class="r"><span>Адреса</span><b>Велика Фонтанна, 19/40</b></div></div>
-    <div class="acts"><a class="btn dk" href="#">${ic('cal')}Додати в календар</a><a class="btn o" href="#">${ic('pin')}Маршрут до салону</a></div>`;
+    <div class="acts"><a class="btn dk" href="#">${ic('cal')}Додати в календар</a><a class="btn o" href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BE%D0%BC%D1%96%D0%BB%D1%8C%D1%84%D0%BE+%D0%B2%D1%83%D0%BB.+%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0+%D0%A4%D0%BE%D0%BD%D1%82%D0%B0%D0%BD%D0%BD%D0%B0+19%2F40+%D0%A3%D0%BC%D0%B0%D0%BD%D1%8C" target="_blank" rel="noopener">${ic('pin')}Маршрут до салону</a></div>`;
   }
   main.innerHTML=h;
   const nx=url({step:step+1});
